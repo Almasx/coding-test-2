@@ -1,4 +1,26 @@
-# Coding Test
+# solution explanation
+
+as i understood right now everything works with greedy algorithm and quite trivial, so based on that i did the same thing.
+
+the task was to implement a fixed bundle price discount where customers can:
+
+- buy 3 items for total $10
+- buy 6 items for total $17
+- buy 9 items for total $20
+
+my solution:
+
+1. added new discount type "FIXED_BUNDLE_AMOUNT" to handle fixed price bundles
+
+2. in the discount calculation logic (lines 228-245 in bundle-builder.ts):
+
+   - calculated original total price of items
+   - subtracted the fixed bundle price from original total
+   - returned the difference as the discount amount
+
+3. the discount is distributed equally across all items in the bundle
+
+4. added test case to verify
 
 ## Setup
 
